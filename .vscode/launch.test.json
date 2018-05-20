@@ -1,0 +1,28 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "ugly-test-demo",
+                "projectName": "ugly-test-demo",
+                "workingDirectory": "/Users/tom/Documents/workspace-neon/ugly-test-demo",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "ugly-test-demo",
+                "projectName": "ugly-test-demo",
+                "workingDirectory": "/Users/tom/Documents/workspace-neon/ugly-test-demo",
+                "args": [],
+                "vmargs": [],
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
