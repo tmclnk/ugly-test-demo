@@ -1,32 +1,34 @@
 package com.prairiegrade.ugly.entity;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.google.gson.annotations.Expose;
 
 @Entity
+@Table(name="Acct")
 public class Account {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
+    //@GeneratedValue(strategy=GenerationType.IDENTITY)
     @Expose
     private Long id;
 
     @Column
     @Expose
-    private BigDecimal ledgerBalance;
+    private long balance;
     
     @ManyToOne
     @Expose
     private Person owner;
 
     @Column
+    @Enumerated(EnumType.STRING)
     @Expose
     private AccountType accountType;
 
@@ -46,12 +48,12 @@ public class Account {
         this.id = id;
     }
 
-    public BigDecimal getLedgerBalance() {
-        return ledgerBalance;
+    public Long getBalance() {
+        return balance;
     }
 
-    public void setLedgerBalance(BigDecimal ledgerBalance) {
-        this.ledgerBalance = ledgerBalance;
+    public void setBalance(Long balance) {
+        this.balance= balance;
     }
 
     public AccountType getAccountType(){

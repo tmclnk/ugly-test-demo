@@ -1,7 +1,5 @@
 package com.prairiegrade.ugly;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -36,7 +34,7 @@ public class Serializer {
         Gson gson = builder.create();
         try {
             for (Account account : em.createQuery("from Account", Account.class).getResultList()){
-                String filename = String.format("%s.%s.json", account.getClass().getSimpleName(), account.getId());
+                var filename = String.format("%s.%s.json", account.getClass().getSimpleName(), account.getId());
                 Path file = dir.resolve(filename);
                 if(Files.exists(file)){
                     Files.delete(file);

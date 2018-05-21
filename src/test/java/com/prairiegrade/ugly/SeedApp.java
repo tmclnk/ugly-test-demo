@@ -1,6 +1,5 @@
 package com.prairiegrade.ugly;
 
-import java.math.BigDecimal;
 import java.util.Random;
 import java.util.stream.IntStream;
 
@@ -9,11 +8,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.prairiegrade.ugly.entity.Account;
 import com.prairiegrade.ugly.entity.Person;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Dumps some random rows into the database, which we can use for testing in our
@@ -41,7 +40,7 @@ public class SeedApp {
 			person.setLastName("LastName" + String.format("%04d", i));
 			
 			Account account = new Account();
-			account.setLedgerBalance(BigDecimal.valueOf(rand.nextDouble()));
+			account.setBalance(rand.nextLong());
 		
 			person.getAccounts().add(account);
 			account.setOwner(person);

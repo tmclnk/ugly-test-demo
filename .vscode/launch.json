@@ -1,16 +1,48 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch)",
+            "name": "Debug (Launch)-CreateJsonData<ugly-test-demo>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
-            "mainClass":"com.prairiegrade.ugly.Serializer",
+            "mainClass": "com.prairiegrade.ugly.CreateJsonData",
+            "projectName": "ugly-test-demo",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SeedApp<ugly-test-demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.prairiegrade.ugly.SeedApp",
+            "projectName": "ugly-test-demo",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Serializer<ugly-test-demo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.prairiegrade.ugly.Serializer",
+            "projectName": "ugly-test-demo",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 0
         }
-    ],
-    "compounds": [],
+    ]
 }
