@@ -16,7 +16,7 @@ import com.prairiegrade.ugly.entity.Account;
 import com.prairiegrade.ugly.entity.Person;
 
 /**
- * Dumps some rows into the database, which we can use for testing in our
+ * Dumps some random rows into the database, which we can use for testing in our
  * unit test.
  */
 public class SeedApp {

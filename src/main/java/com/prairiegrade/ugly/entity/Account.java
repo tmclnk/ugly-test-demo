@@ -13,40 +13,52 @@ import com.google.gson.annotations.Expose;
 
 @Entity
 public class Account {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Expose
-	private Long id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Expose
+    private Long id;
 
-	@Column
-	@Expose
-	private BigDecimal ledgerBalance;
-	
-	@ManyToOne
-	@Expose
-	private Person owner;
+    @Column
+    @Expose
+    private BigDecimal ledgerBalance;
+    
+    @ManyToOne
+    @Expose
+    private Person owner;
 
-	public Person getOwner() {
-		return owner;
-	}
+    @Column
+    @Expose
+    private AccountType accountType;
 
-	public void setOwner(Person owner) {
-		this.owner = owner;
-	}
+    public Person getOwner() {
+        return owner;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public void setOwner(Person owner) {
+        this.owner = owner;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public BigDecimal getLedgerBalance() {
-		return ledgerBalance;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setLedgerBalance(BigDecimal ledgerBalance) {
-		this.ledgerBalance = ledgerBalance;
-	}
+    public BigDecimal getLedgerBalance() {
+        return ledgerBalance;
+    }
+
+    public void setLedgerBalance(BigDecimal ledgerBalance) {
+        this.ledgerBalance = ledgerBalance;
+    }
+
+    public AccountType getAccountType(){
+        return this.accountType;
+    }
+
+    public void setAccountType(AccountType accountType){
+        this.accountType = accountType;
+    }
 }
