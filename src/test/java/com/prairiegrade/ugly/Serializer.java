@@ -18,7 +18,10 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Dumps all the {@link Account} entries from the database
- * to the "data" directory.
+ * to the "data" directory.  You might want to use something
+ * like this if you need to create some test data to work with,
+ * e.g. dump what you need, then massage the data by hand to 
+ * create your incoming test cases.
  */
 public class Serializer {
     private static final Logger logger = LoggerFactory.getLogger(Serializer.class);

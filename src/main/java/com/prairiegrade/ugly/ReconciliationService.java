@@ -7,6 +7,14 @@ import com.prairiegrade.ugly.entity.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Demo service class which is pure-side effect.  This one
+ * is very simple, and may not accurately capture what I'm
+ * trying to demonstrate, which is that you sometimes
+ * have to assert based on deep knowledge of a database (or some
+ * other external thing) in order to get a decent automated
+ * integration test.
+ */
 public class ReconciliationService {
     private static final Logger logger = LoggerFactory.getLogger(ReconciliationService.class);
     private final EntityManager em;
